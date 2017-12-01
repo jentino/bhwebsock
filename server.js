@@ -23,3 +23,4 @@ setInterval(() => {
     client.send(new Date().toTimeString());
   });
 }, 1000);
+//tested
