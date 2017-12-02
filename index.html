@@ -1,17 +1,85 @@
+<!DOCTYPE html>
 <html>
-    <body>
-      <center>
-        <u><h1 id='server-time'></h1></u>
-        <script>
-          var HOST = location.origin.replace(/^http/, 'ws')
-          var ws = new WebSocket(HOST);
-          var el = document.getElementById('server-time');
-    
-          ws.onmessage = function (event) {
-            el.innerHTML = 'Server time: ' + event.data;
-          };
-        </script>
-      </center>
-    </body>
-  </html>
-  
+  <head>
+    <meta charset="utf-8" />
+    <base href="/mobile" />
+    <title>BinaryHaven Mobile</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <link rel="shortcut icon" href="http://www.binaryhaven.co.za/mobile/assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/dist/css/mobile-angular-ui-hover.min.css" />
+    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/dist/css/mobile-angular-ui-base.min.css" />
+    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/dist/css/mobile-angular-ui-desktop.min.css" />
+    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/demo.css" />
+    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/css/main.css" />
+    <script src="http://www.binaryhaven.co.za/mobile/js/angular.min.js"></script>
+    <script src="http://www.binaryhaven.co.za/mobile/js/angular-route.min.js"></script>
+    <script src="http://www.binaryhaven.co.za/mobile/dist/js/mobile-angular-ui.min.js"></script>
+    <!-- Required to use $touch, $swipe, $drag and $translate services -->
+    <script src="http://www.binaryhaven.co.za/mobile/dist/js/mobile-angular-ui.gestures.min.js"></script>
+    <script src="http://www.binaryhaven.co.za/mobile/demo.js"></script>
+    <!-- <script src="http://www.binaryhaven.co.za/mobile/frontend.js"></script> -->
+    <!-- <script src="http://www.binaryhaven.co.za/mobile/angular.min.js"></script> -->
+    <script src="http://www.binaryhaven.co.za/mobile/angular-websocket.js"></script>
+
+    <!-- <script src="http://www.binaryhaven.co.za/mobile/src/js/jquery.min.js"></script> -->
+    <script src="http://www.binaryhaven.co.za/mobile/angular-round-progress-directive.js"></script>
+  </head>
+
+  <body ng-app="MobileAngularUiExamples" ng-controller="MainController" ui-prevent-touchmove-defaults    >
+
+    <!-- Sidebars -->
+    <div ng-include="'http://www.binaryhaven.co.za/mobile/sidebar.html'" ui-track-as-search-param="true" class="sidebar sidebar-left"></div>
+
+    <div ng-include="'http://www.binaryhaven.co.za/mobile/sidebarRight.html'" class="sidebar sidebar-right"></div>
+
+    <div class="app" ui-swipe-right="Ui.turnOn('uiSidebarLeft')" ui-swipe-left="Ui.turnOff('uiSidebarLeft')">
+
+      <!-- Navbars -->
+
+      <!-- <div class="navbar navbar-app navbar-absolute-top">
+        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+           Home 
+        </div>
+        <div class="btn-group pull-left">
+          <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+            <i class="fa fa-bars"></i> Menu
+          </div>
+        </div>
+        <div class="btn-group pull-right" ui-yield-to="navbarAction">
+          <div ui-toggle="uiSidebarRight" class="btn sidebar-right-toggle">
+            <i class="fa fa-comment"></i> Chat
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="navbar navbar-app navbar-absolute-bottom">
+        <div class="btn-group justified">
+          <!-- <a href="http://www.binaryhaven.co.za/mobile/overlay.html" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Deposit</a>
+          <a href="http://www.binaryhaven.co.za/mobile/login.html" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Credits</a> 
+          <a href="http://www.binaryhaven.co.za/mobile/scroll.html" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Disclaimer</a>
+        </div>
+      </div>
+
+      <!-- App Body <!-- -->
+      <div class="app-body" ng-class="{loading: loading}">
+        <div ng-show="loading" class="app-content-loading">
+          <i class="fa fa-spinner fa-spin loading-spinner"></i>
+        </div>
+        <div class="app-content">
+          <ng-view></ng-view>
+        </div>
+      </div>
+
+    </div><!-- ~ .app -->
+
+    <div ui-yield-to="modals"></div>
+
+    <script src="http://www.binaryhaven.co.za/mobile/knob/bower_components/d3/d3.js"></script>
+    <script src="http://www.binaryhaven.co.za/mobile/knob/dist/ng-knob.js"></script>
+    <script src="http://www.binaryhaven.co.za/mobile/knob/demo/demo.js"></script>
+
+  </body>
+</html>

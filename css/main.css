@@ -1,0 +1,12 @@
+.list-group-item{
+    margin: 0;
+    font-family: inherit;
+    font-weight: bold;
+    color: black;
+    text-rendering: optimizelegibility;
+    align-content: center;
+}
+
+.lightbulb{
+    color: pink;
+}
