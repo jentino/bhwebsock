@@ -8,32 +8,32 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
-    <link rel="shortcut icon" href="http://www.binaryhaven.co.za/mobile/assets/img/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/dist/css/mobile-angular-ui-hover.min.css" />
-    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/dist/css/mobile-angular-ui-base.min.css" />
-    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/dist/css/mobile-angular-ui-desktop.min.css" />
-    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/demo.css" />
-    <link rel="stylesheet" href="http://www.binaryhaven.co.za/mobile/css/main.css" />
-    <script src="http://www.binaryhaven.co.za/mobile/js/angular.min.js"></script>
-    <script src="http://www.binaryhaven.co.za/mobile/js/angular-route.min.js"></script>
-    <script src="http://www.binaryhaven.co.za/mobile/dist/js/mobile-angular-ui.min.js"></script>
+    <link rel="shortcut icon" href="http://serene-depths-49662.herokuapp.com/assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="http://serene-depths-49662.herokuapp.com/dist/css/mobile-angular-ui-hover.min.css" />
+    <link rel="stylesheet" href="http://serene-depths-49662.herokuapp.com/dist/css/mobile-angular-ui-base.min.css" />
+    <link rel="stylesheet" href="http://serene-depths-49662.herokuapp.com/dist/css/mobile-angular-ui-desktop.min.css" />
+    <link rel="stylesheet" href="http://serene-depths-49662.herokuapp.com/demo.css" />
+    <link rel="stylesheet" href="http://serene-depths-49662.herokuapp.com/css/main.css" />
+    <script src="http://serene-depths-49662.herokuapp.com/js/angular.min.js"></script>
+    <script src="http://serene-depths-49662.herokuapp.com/js/angular-route.min.js"></script>
+    <script src="http://serene-depths-49662.herokuapp.com/dist/js/mobile-angular-ui.min.js"></script>
     <!-- Required to use $touch, $swipe, $drag and $translate services -->
-    <script src="http://www.binaryhaven.co.za/mobile/dist/js/mobile-angular-ui.gestures.min.js"></script>
-    <script src="http://www.binaryhaven.co.za/mobile/demo.js"></script>
-    <!-- <script src="http://www.binaryhaven.co.za/mobile/frontend.js"></script> -->
-    <!-- <script src="http://www.binaryhaven.co.za/mobile/angular.min.js"></script> -->
-    <script src="http://www.binaryhaven.co.za/mobile/angular-websocket.js"></script>
+    <script src="http://serene-depths-49662.herokuapp.com/dist/js/mobile-angular-ui.gestures.min.js"></script>
+    <script src="http://serene-depths-49662.herokuapp.com/demo.js"></script>
+    <!-- <script src="http://serene-depths-49662.herokuapp.com/frontend.js"></script> -->
+    <!-- <script src="http://serene-depths-49662.herokuapp.com/angular.min.js"></script> -->
+    <script src="http://serene-depths-49662.herokuapp.com/angular-websocket.js"></script>
 
-    <!-- <script src="http://www.binaryhaven.co.za/mobile/src/js/jquery.min.js"></script> -->
-    <script src="http://www.binaryhaven.co.za/mobile/angular-round-progress-directive.js"></script>
+    <!-- <script src="http://serene-depths-49662.herokuapp.com/src/js/jquery.min.js"></script> -->
+    <script src="http://serene-depths-49662.herokuapp.com/angular-round-progress-directive.js"></script>
   </head>
 
   <body ng-app="MobileAngularUiExamples" ng-controller="MainController" ui-prevent-touchmove-defaults    >
 
     <!-- Sidebars -->
-    <div ng-include="'http://www.binaryhaven.co.za/mobile/sidebar.html'" ui-track-as-search-param="true" class="sidebar sidebar-left"></div>
+    <div ng-include="'http://serene-depths-49662.herokuapp.com/sidebar.html'" ui-track-as-search-param="true" class="sidebar sidebar-left"></div>
 
-    <div ng-include="'http://www.binaryhaven.co.za/mobile/sidebarRight.html'" class="sidebar sidebar-right"></div>
+    <div ng-include="'http://serene-depths-49662.herokuapp.com/sidebarRight.html'" class="sidebar sidebar-right"></div>
 
     <div class="app" ui-swipe-right="Ui.turnOn('uiSidebarLeft')" ui-swipe-left="Ui.turnOff('uiSidebarLeft')">
 
@@ -57,9 +57,9 @@
 
       <!-- <div class="navbar navbar-app navbar-absolute-bottom">
         <div class="btn-group justified">
-          <!-- <a href="http://www.binaryhaven.co.za/mobile/overlay.html" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Deposit</a>
-          <a href="http://www.binaryhaven.co.za/mobile/login.html" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Credits</a> 
-          <a href="http://www.binaryhaven.co.za/mobile/scroll.html" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Disclaimer</a>
+          <!-- <a href="http://serene-depths-49662.herokuapp.com/overlay.html" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Deposit</a>
+          <a href="http://serene-depths-49662.herokuapp.com/login.html" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Credits</a> 
+          <a href="http://serene-depths-49662.herokuapp.com/scroll.html" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Disclaimer</a>
         </div>
       </div>
 
@@ -77,9 +77,9 @@
 
     <div ui-yield-to="modals"></div>
 
-    <script src="http://www.binaryhaven.co.za/mobile/knob/bower_components/d3/d3.js"></script>
-    <script src="http://www.binaryhaven.co.za/mobile/knob/dist/ng-knob.js"></script>
-    <script src="http://www.binaryhaven.co.za/mobile/knob/demo/demo.js"></script>
+    <script src="http://serene-depths-49662.herokuapp.com/knob/bower_components/d3/d3.js"></script>
+    <script src="http://serene-depths-49662.herokuapp.com/knob/dist/ng-knob.js"></script>
+    <script src="http://serene-depths-49662.herokuapp.com/knob/demo/demo.js"></script>
 
   </body>
 </html>

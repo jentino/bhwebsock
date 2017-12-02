@@ -30,8 +30,8 @@ app.run(function($transform) {
 // in order to avoid unwanted routing.
 //
 app.config(function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'http://www.binaryhaven.co.za/mobile/login.html', reloadOnSearch: false}).when('/home', {templateUrl: 'http://www.binaryhaven.co.za/mobile/home.html', reloadOnSearch: false});
-  $routeProvider.when('/account', {templateUrl: 'http://www.binaryhaven.co.za/mobile/account.html', reloadOnSearch: false}).when('/login', {templateUrl: 'http://www.binaryhaven.co.za/mobile/login.html', reloadOnSearch: false}).when('/cancel', {templateUrl: 'http://www.binaryhaven.co.za/mobile/cancel.html', reloadOnSearch: false}).when('/success', {templateUrl: 'http://www.binaryhaven.co.za/mobile/success.html', reloadOnSearch: false}).when('/trades', {templateUrl: 'http://www.binaryhaven.co.za/mobile/trades.html', reloadOnSearch: false}).otherwise({templateUrl: 'http://www.binaryhaven.co.za/mobile/login.html'});
+  $routeProvider.when('/', {templateUrl: 'http://serene-depths-49662.herokuapp.com/login.html', reloadOnSearch: false}).when('/home', {templateUrl: 'http://serene-depths-49662.herokuapp.com/home.html', reloadOnSearch: false});
+  $routeProvider.when('/account', {templateUrl: 'http://serene-depths-49662.herokuapp.com/account.html', reloadOnSearch: false}).when('/login', {templateUrl: 'http://serene-depths-49662.herokuapp.com/login.html', reloadOnSearch: false}).when('/cancel', {templateUrl: 'http://serene-depths-49662.herokuapp.com/cancel.html', reloadOnSearch: false}).when('/success', {templateUrl: 'http://serene-depths-49662.herokuapp.com/success.html', reloadOnSearch: false}).when('/trades', {templateUrl: 'http://serene-depths-49662.herokuapp.com/trades.html', reloadOnSearch: false}).otherwise({templateUrl: 'http://serene-depths-49662.herokuapp.com/login.html'});
   
 });
 
@@ -349,7 +349,7 @@ app.controller('MainController', function($rootScope, $scope, $http, $location, 
       $http({
         
         method: 'GET',
-        url: 'http://www.binaryhaven.co.za/mobile/api/getpbar.php'
+        url: 'http://serene-depths-49662.herokuapp.com/api/getpbar.php'
         
         }).then(function (response) {
             
@@ -393,7 +393,7 @@ app.controller('MainController', function($rootScope, $scope, $http, $location, 
         $http({
             
             method: 'GET',
-            url: 'http://www.binaryhaven.co.za/mobile/api/getbalance.php'
+            url: 'http://serene-depths-49662.herokuapp.com/api/getbalance.php'
             
         }).then(function (response) {
             
@@ -446,7 +446,7 @@ $scope.login = function() {
   
   
   // $http({
-  //     url:  'http://www.binaryhaven.co.za/mobile/api/validatelogin.php',
+  //     url:  'http://serene-depths-49662.herokuapp.com/api/validatelogin.php',
   //     method: 'POST',
   //     headers: {
   //         'Content-Type': 'application/x-www-urlencoded'
