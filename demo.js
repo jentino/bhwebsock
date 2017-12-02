@@ -30,8 +30,8 @@ app.run(function($transform) {
 // in order to avoid unwanted routing.
 //
 app.config(function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'https://serene-depths-49662.herokuapp.com/login.html', reloadOnSearch: false}).when('/home', {templateUrl: 'https://serene-depths-49662.herokuapp.com/home.html', reloadOnSearch: false});
-  $routeProvider.when('/account', {templateUrl: 'https://serene-depths-49662.herokuapp.com/account.html', reloadOnSearch: false}).when('/login', {templateUrl: 'https://serene-depths-49662.herokuapp.com/login.html', reloadOnSearch: false}).when('/cancel', {templateUrl: 'https://serene-depths-49662.herokuapp.com/cancel.html', reloadOnSearch: false}).when('/success', {templateUrl: 'https://serene-depths-49662.herokuapp.com/success.html', reloadOnSearch: false}).when('/trades', {templateUrl: 'https://serene-depths-49662.herokuapp.com/trades.html', reloadOnSearch: false}).otherwise({templateUrl: 'https://serene-depths-49662.herokuapp.com/login.html'});
+  $routeProvider.when('/', {templateUrl: 'login.html', reloadOnSearch: false}).when('/home', {templateUrl: 'home.html', reloadOnSearch: false});
+  $routeProvider.when('/account', {templateUrl: 'account.html', reloadOnSearch: false}).when('/login', {templateUrl: 'login.html', reloadOnSearch: false}).when('/cancel', {templateUrl: 'cancel.html', reloadOnSearch: false}).when('/success', {templateUrl: 'success.html', reloadOnSearch: false}).when('/trades', {templateUrl: 'trades.html', reloadOnSearch: false}).otherwise({templateUrl: 'login.html'});
   
 });
 
@@ -349,7 +349,7 @@ app.controller('MainController', function($rootScope, $scope, $http, $location, 
       $http({
         
         method: 'GET',
-        url: 'https://serene-depths-49662.herokuapp.com/api/getpbar.php'
+        url: 'api/getpbar.php'
         
         }).then(function (response) {
             
@@ -393,7 +393,7 @@ app.controller('MainController', function($rootScope, $scope, $http, $location, 
         $http({
             
             method: 'GET',
-            url: 'https://serene-depths-49662.herokuapp.com/api/getbalance.php'
+            url: 'api/getbalance.php'
             
         }).then(function (response) {
             
@@ -446,7 +446,7 @@ $scope.login = function() {
   
   
   // $http({
-  //     url:  'https://serene-depths-49662.herokuapp.com/api/validatelogin.php',
+  //     url:  'api/validatelogin.php',
   //     method: 'POST',
   //     headers: {
   //         'Content-Type': 'application/x-www-urlencoded'
