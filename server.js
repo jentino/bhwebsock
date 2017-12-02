@@ -3,7 +3,6 @@
 const express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
-var pg = require('pg');
 
 
 const PORT = process.env.PORT || 3000;
