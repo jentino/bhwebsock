@@ -7,12 +7,15 @@
   <body>
     <center>
       <u><h1 id='server-time'></h1></u>
+      <u><h1 id='server-ip'></h1></u>
       <script>
       
       var HOST = location.origin.replace(/^http/, 'ws')
       var ws = new WebSocket(HOST);
       var el = document.getElementById('server-time');
       
+      document.getElementById('server-ip').innerHTML = location.origin;
+
       ws.onmessage = function (event) {
         el.innerHTML = 'Server time: ' + event.data;
       };
